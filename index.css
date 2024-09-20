@@ -32,7 +32,7 @@ body {
     color: #333;
     font-size: 20px;
     text-align: center;
-    color:#1a3b81;
+    color: #1a3b81;
  }
  
  .column {
@@ -261,11 +261,7 @@ body {
     scroll-behavior: smooth;
  }
  /* 4th PAGE*/
- body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
+
 
 .container {
     width: 100%;
@@ -466,3 +462,4 @@ body {
 .location a:hover {
     text-decoration: underline;
 }
+
