@@ -1,171 +1,221 @@
-/* Global Styles */
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
+/* Header */
 .header {
     background-color: #FFF;
     padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .header a {
     color: #333;
     text-decoration: none;
-    font-size: 18px;
-    margin: 0 10px;
+    font-size: 20px;
+    margin: 0 20px;
 }
 
 .header .donate {
     border: 1px solid #333;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
-/* Main Content */
+/* Content Section with Flexbox */
 .content {
     display: flex;
-    flex-direction: column; /* Stack for small screens */
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    height: 290px;
     background-color: #F4A460;
-    color: #1a3b81;
-    font-size: 18px; /* Adjust for mobile readability */
+    color: #333;
+    font-size: 20px;
     text-align: center;
+    color: #1a3b81;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .column {
-    width: 100%;
-    max-width: 500px; /* Limit max width for responsiveness */
-    margin: 10px 0;
+    width: 45%;
+    flex: 1 1 45%;
+    text-align: center;
+    margin: 10px;
 }
 
 .column .logo {
-    font-size: 30px; /* Smaller font size for mobile */
+    font-size: 50px;
     margin: 20px 0;
 }
 
-/* Job Area */
 .jobarea {
-    height: auto; /* Allow flexible height */
+    height: 150px;
     display: flex;
-    flex-direction: column; /* Stack items for mobile */
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
     font-family: monospace;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 30px;
+    margin-top: 34px;
 }
 
-/* Component Section */
 .comp {
     display: flex;
-    flex-direction: column; /* Stack items */
     align-items: center;
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: 20px;
+    margin-left: 20px;
 }
 
-/* Images */
+/* Image Responsiveness */
 .photo img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
+    margin-right: 25px;
 }
 
-/* Scroll Behavior */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Testimonials Section */
-.testimonial-container {
-    padding: 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
-.testimonials {
+/* Flexbox Layout for second page */
+.Flex {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: center;
+    flex-direction: row;
+    height: auto;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.LeftM, .LeftV, .LeftA {
+    flex: 1 1 48%;
+    margin: 10px;
+}
+
+.Right {
+    flex: 1 1 48%;
+    font-size: 1.125rem;
+    color: #111827;
+    line-height: 1.625;
+}
+
+/* Third Page Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-section, .right-section {
+    flex: 1 1 48%;
+    padding: 20px;
 }
 
 .testimonial {
-    background-color: white;
-    border-radius: 4px;
-    margin: 10px;
-    padding: 15px;
-    width: 100%; /* Full width for smaller screens */
-    max-width: 300px; /* Limit max width */
     text-align: center;
+    width: 30%;
+    margin-bottom: 25px;
 }
 
 .testimonial img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-/* Contact Section */
-.info-section {
-    background-color: #f2a268;
-    padding: 20px;
+.founder-section {
     display: flex;
-    flex-direction: column; /* Stack for mobile */
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* Footer Section */
+.footer {
     text-align: center;
+    padding: 20px;
+    background-color: #f4a460;
 }
 
-.contact-info, .location, .virtual-tour {
-    width: 100%; /* Full width for mobile */
-    margin-bottom: 20px;
-}
+/* Media Queries for Responsive Design */
 
-/* Donation Button */
-.donate-button {
-    background-color: #f4a261;
-    color: white;
-    padding: 15px;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    width: 100%; /* Full width for mobile */
-    max-width: 300px;
-    margin: 10px auto;
-}
-
-.donate-button:hover {
-    background-color: #e76f51;
-}
-
-/* Media Queries for Mobile and Tablet */
-@media (min-width: 768px) {
-    .content {
-        flex-direction: row; /* Row layout for tablets */
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
     }
-
+    
+    .content {
+        flex-direction: column;
+        height: auto;
+    }
+    
     .column {
-        width: 45%;
+        width: 100%;
+        flex: 1 1 100%;
     }
-
-    .jobarea {
-        flex-direction: row;
+    
+    .Flex {
+        flex-direction: column;
     }
-
-    .comp {
-        flex-direction: row;
-        margin-left: 20px;
+    
+    .LeftM, .LeftV, .LeftA, .Right {
+        flex: 1 1 100%;
+    }
+    
+    .testimonial {
+        width: 100%;
     }
 }
 
-@media (min-width: 1024px) {
+/* Tablets */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .content {
-        justify-content: space-between;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .column {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    
+    .Flex {
+        flex-direction: column;
+    }
+    
+    .LeftM, .LeftV, .LeftA, .Right {
+        flex: 1 1 100%;
+    }
+    
+    .testimonial {
+        width: 100%;
     }
 }
 
+/* Laptops and Desktops */
+@media (min-width: 769px) {
+    .header {
+        flex-direction: row;
+    }
+    
+    .content {
+        flex-direction: row;
+    }
+    
+    .Flex {
+        flex-direction: row;
+    }
+}
