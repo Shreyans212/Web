@@ -1,11 +1,10 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Body Styles */
+/* Body Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -17,17 +16,16 @@ body {
 .header {
     background-color: #FFF;
     padding: 20px;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .header a {
     color: #333;
     text-decoration: none;
     font-size: 20px;
-    margin: 0 20px;
+    margin: 10px;
 }
 
 .header .donate {
@@ -36,25 +34,21 @@ body {
     cursor: pointer;
 }
 
-/* Content Section with Flexbox */
+/* Content */
 .content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 290px;
     background-color: #F4A460;
-    color: #333;
+    color: #1a3b81;
     font-size: 20px;
     text-align: center;
-    color: #1a3b81;
     padding: 20px;
     flex-wrap: wrap;
 }
 
 .column {
-    width: 45%;
     flex: 1 1 45%;
-    text-align: center;
     margin: 10px;
 }
 
@@ -63,11 +57,11 @@ body {
     margin: 20px 0;
 }
 
+/* Job Area */
 .jobarea {
-    height: 150px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
     font-family: monospace;
     font-size: 30px;
@@ -81,51 +75,50 @@ body {
     margin-left: 20px;
 }
 
-/* Image Responsiveness */
 .photo img {
     max-width: 100%;
     height: auto;
     margin-right: 25px;
 }
 
-/* Flexbox Layout for second page */
+/* Second Page */
 .Flex {
     display: flex;
-    flex-direction: row;
-    height: auto;
     flex-wrap: wrap;
     margin-top: 25px;
-    margin-bottom: 20px;
     justify-content: space-between;
 }
 
 .LeftM, .LeftV, .LeftA {
-    flex: 1 1 48%;
+    flex: 1 1 45%;
     margin: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .Right {
-    flex: 1 1 48%;
+    flex: 1 1 45%;
     font-size: 1.125rem;
     color: #111827;
     line-height: 1.625;
 }
 
-/* Third Page Layout */
+/* Third Page */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .left-section, .right-section {
-    flex: 1 1 48%;
+    flex: 1 1 45%;
     padding: 20px;
 }
 
 .testimonial {
     text-align: center;
-    width: 30%;
+    width: 100%;
     margin-bottom: 25px;
 }
 
@@ -137,47 +130,109 @@ body {
 
 .founder-section {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-/* Footer Section */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4a460;
+/* Fourth Page */
+.donation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* Media Queries for Responsive Design */
+.donation-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 35px;
+    background-color: #f4a261;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Fifth Page */
+.testimonial-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 36px;
+    color: #1f4e79;
+    background-color: #f2a541;
+    padding: 15px;
+    border-radius: 1%;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial {
+    background-color: white;
+    border-radius: 4px;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Sixth Page */
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2a268;
+    padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.contact-info, .location, .virtual-tour {
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+/* Media Queries for Responsiveness */
 
 /* Mobile Phones */
 @media (max-width: 480px) {
     .header {
         flex-direction: column;
-        align-items: center;
     }
-    
+
     .content {
         flex-direction: column;
-        height: auto;
     }
-    
+
     .column {
         width: 100%;
-        flex: 1 1 100%;
     }
-    
-    .Flex {
+
+    .Flex, .container {
         flex-direction: column;
     }
-    
+
     .LeftM, .LeftV, .LeftA, .Right {
-        flex: 1 1 100%;
+        width: 100%;
     }
-    
-    .testimonial {
+
+    .testimonial, .testimonial-container {
         width: 100%;
     }
 }
@@ -186,44 +241,25 @@ body {
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        align-items: center;
     }
-    
+
     .content {
         flex-direction: column;
-        height: auto;
     }
-    
+
     .column {
         width: 100%;
-        flex: 1 1 100%;
     }
-    
-    .Flex {
+
+    .Flex, .container {
         flex-direction: column;
     }
-    
+
     .LeftM, .LeftV, .LeftA, .Right {
-        flex: 1 1 100%;
+        width: 100%;
     }
-    
-    .testimonial {
+
+    .testimonial, .testimonial-container {
         width: 100%;
     }
 }
-
-/* Laptops and Desktops */
-@media (min-width: 769px) {
-    .header {
-        flex-direction: row;
-    }
-    
-    .content {
-        flex-direction: row;
-    }
-    
-    .Flex {
-        flex-direction: row;
-    }
-}
-
