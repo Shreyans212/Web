@@ -1,220 +1,266 @@
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
- }
- 
- .header {
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Header styles */
+.header {
     background-color: #FFF;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
- }
- 
- .header a {
+}
+
+.header a {
     color: #333;
     text-decoration: none;
-    font-size: 20px;
-    margin: 0 20px;
- }
- 
- .header .donate {
+    font-size: 18px;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.header .donate {
     border: 1px solid #333;
     padding: 10px 20px;
- }
- 
- .content {
+}
+
+/* Main content */
+.content {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 290px;
+    min-height: 300px;
     background-color: #F4A460;
-    color: #333;
-    font-size: 20px;
+    color: #1a3b81;
     text-align: center;
-    color:#1a3b81;
- }
- 
- .column {
-    width: 45%;
- }
- 
- .column .logo {
-    font-size: 50px;
+    padding: 20px;
+}
+
+.column {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 40px;
     margin: 20px 0;
- }
- 
+}
 
-
-.jobarea{
-    height: 150px;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
+/* Job area styles */
+.jobarea {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     font-family: monospace;
-    font-size: 30px;
-    margin-top: 34px;
-   
+    font-size: 25px;
+    margin: 30px 0;
+    padding: 10px;
 }
-.comp{
-    height: 30px;
-    padding-block-start: 4%;
-    display:flex;
-    margin-left: 20px;
-    align-items: center;
-    font-size: 20px;
 
+.comp {
+    padding: 10px;
+    border: 1px solid #333;
+    margin: 10px;
 }
-.photo img{
-   width: px;
-   height: 294px;
-   margin-right: 25px;
+
+/* Photo styles */
+.photo img {
+    max-width: 100%;
+    height: auto;
 }
-.html {
-   scroll-behavior: smooth;
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .column {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .jobarea {
+        font-size: 30px;
+    }
+
+    .comp {
+        font-size: 20px;
+    }
 }
-/*SECOND PAGE*/
-.LeftM{
-    
-    font-size: 1.5rem; 
-    font-weight: 700; 
-    letter-spacing: 0.025em; 
-   
-    margin-bottom: 170px; 
+
+@media (min-width: 1024px) {
+    .header a {
+        font-size: 20px;
+    }
+
+    .logo {
+        font-size: 50px;
+    }
+}
+
+
+.LeftM, .LeftV, .LeftA {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    margin-left: 10%; /* Responsive left margin */
+}
+
+.LeftM {
     margin-top: 70px;
-    margin-left: 100px;
-  
-  
-}
-.LeftV{
-
-font-size: 1.5rem; 
-font-weight: 700; 
-letter-spacing: 0.025em; 
-margin-top: 270px;
-margin-left: 100px;
-margin-bottom: 100px;
-
-}
-.LeftA{
-font-size: 1.5rem; 
-font-weight: 700; 
-letter-spacing: 0.025em; 
-
-margin-left: 100px;
-
-
+    margin-bottom: 170px;
 }
 
-.Right{ 
+.LeftV {
+    margin-top: 270px;
+    margin-bottom: 100px;
+}
+
+.LeftA {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Right Section Styles */
+.Right { 
     font-size: 1.125rem; 
     color: #111827; 
-    line-height: 1.625; 
-    
+    line-height: 1.625;
+    padding: 20px;
 }
-.Flex{
+
+/* Flex container for layout */
+.Flex {
     margin-top: 25px;
-    display: flex; 
-    flex-direction: row; 
-    height: 593px; 
-    margin-bottom: 20px;    
+    display: flex;
+    flex-direction: column; /* Stack elements on smaller screens */
+    margin-bottom: 20px;
+    height: auto; /* Removed fixed height */
+    padding: 20px;
 }
-.rr{
-            width: 100%;
-            background-color: #F4A460;
-            padding: 2rem; 
-          
+
+/* Right and Left section wrappers */
+.rr {
+    width: 100%;
+    background-color: #F4A460;
+    padding: 2rem;
 }
-.html {
-    scroll-behavior: smooth;
- }
-.leftside{
-    
-            width: 100%;               
-            background-color: white;    
-            padding: 32px;            
-        
-        
-        @media (min-width: 768px) {
-            .your-class {
-                width: 33.3333%;     
-            }
-        }
-}     
+
+.leftside {
+    width: 100%;
+    background-color: white;
+    padding: 32px;
+}
+
+/* Spacing Utility */
 .space > * {
-    margin-bottom: 48px;  /* Adds spacing between elements */
+    margin-bottom: 48px; /* Adds spacing between elements */
 }
 
 .space > *:last-child {
-    margin-bottom: 0;  /* Removes the margin from the last child */
+    margin-bottom: 0; /* Removes margin from the last child */
 }
-/*3rd PAGE*/
 
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    /* For tablet and larger screens */
+    .Flex {
+        flex-direction: row; /* Elements side by side on larger screens */
+        height: 593px; /* Reintroducing height for larger screens */
+    }
+
+    .LeftM, .LeftV, .LeftA {
+        margin-left: 100px; /* Restores the left margin for larger screens */
+    }
+
+    .leftside {
+        width: 33.3333%; /* Sidebar takes up a third of the screen */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Additional styles for larger desktops */
+    .LeftM, .LeftV, .LeftA {
+        font-size: 1.75rem; /* Slightly increase font size on larger screens */
+    }
+
+    .Right {
+        font-size: 1.25rem;
+    }
+}
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2a564;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: flex;
-    
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
 }
 
+/* Left Section */
 .left-section {
     flex: 1;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 20px;
     font-size: 18px;
-    
 }
 
 .left-section h2 {
     margin-bottom: 20px;
 }
 
+/* Right Section */
 .right-section {
     flex: 3;
     background-color: #f2a564;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .testimonials {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 25px;
 }
 
 .testimonial {
     text-align: center;
-    width: 30%;
+    width: 100%;
+    max-width: 30%;
+    margin-bottom: 20px;
 }
 
 .testimonial img {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-left: 40px;
-}
-
-.testimonial p {
-    margin-top: 10px;
-    font-size: 14px;
-    margin-left: 30px;
 }
 
 .read-more {
     text-align: right;
-    margin-top: 20px;
-    width: 100%;
 }
 
 .read-more button {
@@ -232,64 +278,25 @@ body {
 
 .founder-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 40px;
 }
 
 .founder-section img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.founder-text {
-    max-width: 500px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-.atf{
-    margin-top: 300px;
-    text-align: center;
-}
-.testi{
-    margin-top: 60px;
-    text-align: center;
-}
-.html {
-    scroll-behavior: smooth;
- }
- /* 4th PAGE*/
- body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-
+/* 4th Page */
 .header4 {
     background-color: #f4a261;
     padding: 20px;
     text-align: center;
-    font-family: 'Georgia', serif;
     margin-top: 20px;
-
 }
-
-.header h1 {
-    margin: 0;
-    color: #2a2a2a;
-    font-size: 24px;
-    font-weight: bold;
-}
-
 
 .donation-details {
     margin-top: 30px;
@@ -303,154 +310,87 @@ body {
 }
 
 .donation-item img {
-    margin-right: 25px;
     width: 100px;
     height: 100px;
-    margin-left: 20px;
-}
-
-.donation-item p {
-    font-size: 19px;
-    color: #2a2a2a;
-    margin: 0;
-    font-family: 'Georgia', serif;
-}
-
-
-.donate-section {
-    margin-top: 40px;
+    margin-right: 25px;
 }
 
 .donate-button {
     background-color: #f4a261;
     color: white;
-    padding: 1xpx 30px;
-    border: none;
+    padding: 10px 30px;
+    border: 2px solid black;
     font-size: 35px;
     cursor: pointer;
-    margin-left: 555px;
-    border: 2px solid black;
-    margin-bottom: 10px;
-    
+    margin: 40px auto;
 }
 
 .donate-button:hover {
     background-color: #e76f51;
 }
-/*5th PAGE*/
-.testimonial-container {
-    padding: 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-}
 
-.heading {
-    font-size: 36px;
-    color: #1f4e79;
-    margin-bottom: 20px;
-    background-color: #f2a541; 
-    padding: 15px;
-    border-radius: 1%;
-    text-align: left;
-    align-items: left;
-    margin-left: -20px;
-    margin-top: -10px;
-   
-    
-    
-    
-}
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
 
-.testimonials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.testimonial {
-    background-color:white;
-    border-radius: 4px;
-    
-    margin: 4px;
-    padding: 18px;
-    width: 200px;
-    text-align: center;
-   
-}
-
-.testimonial-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.testimonial-text {
-    font-size: 14px;
-    color: #333;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* To ensure the testimonial text always stays within the boundaries */
-.testimonial-text:before {
-    content: "";
-    display: block;
-    margin-top: 1px;
-}
-
-@media (max-width: 768px) {
     .testimonial {
-        width: 100%
+        width: 30%;
+    }
 
-    }}
+    .founder-section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
 
+@media (min-width: 1024px) {
+    .read-more button {
+        font-size: 18px;
+    }
 
+    .donate-button {
+        font-size: 40px;
+    }
+}
 
-/* 6th PAGE*/
 .container {
     width: 100%;
     margin: 0;
+    display: flex;
     flex-wrap: wrap;
 }
 
-.banner img{
-    
-
+.banner img {
+    width: 100%;
+    height: auto;
     background-position: left;
-    height: 582px;
- 
 }
 
 .info-section {
     background-color: #f2a268;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: -30px;
-    height: 220px;
     text-align: center;
+    margin: 0 auto;
     width: 100%;
-    margin-top: -4px;
 }
 
 .contact-info, .location, .virtual-tour {
-    width: 30%;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
 .contact-info h3, .location h3, .virtual-tour h3 {
-    font-size: 1.5em;
-    
-}
-
-.contact-info p, .location p {
-    margin: 5px 0;
+    font-size: 1.2em;
 }
 
 .map-icon img {
     width: 50px;
-    height: auto;
 }
 
 .virtual-tour img {
@@ -458,10 +398,19 @@ body {
     height: auto;
 }
 
-.location a {
-    color: #000;
-    text-decoration: none;
+/* Responsive Design */
+@media (min-width: 768px) {
+    .contact-info, .location, .virtual-tour {
+        width: 30%;
+    }
+
+    .banner img {
+        height: 400px;
+    }
 }
 
-.location a:hover {
-    text-decoration: underline;
+@media (min-width: 1024px) {
+    .banner img {
+        height: 582px;
+    }
+}
