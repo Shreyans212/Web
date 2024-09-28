@@ -37,7 +37,7 @@ html {
     justify-content: space-around;
     align-items: center;
     min-height: 300px;
-    background-color: #F4A460;
+    background-color: #f4a460;
     color: #1a3b81;
     text-align: center;
     padding: 20px;
@@ -57,18 +57,19 @@ html {
 .jobarea {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
     font-family: monospace;
     font-size: 25px;
     margin: 30px 0;
     padding: 10px;
+    background-colour: white;
 }
 
 .comp {
     padding: 10px;
-    border: 1px solid #333;
     margin: 10px;
+    background-color:white
 }
 
 /* Photo styles */
@@ -97,6 +98,10 @@ html {
         font-size: 20px;
     }
 }
+.LeftM, .LeftV, .LeftA{
+    margin-top: 20%;
+    margin-left: 3000px;
+}
 
 @media (min-width: 1024px) {
     .header a {
@@ -117,12 +122,12 @@ html {
 }
 
 .LeftM {
-    margin-top: 70px;
-    margin-bottom: 170px;
+    margin-top: 30%;
+    
 }
 
 .LeftV {
-    margin-top: 270px;
+    margin-top: 170px;
     margin-bottom: 100px;
 }
 
@@ -197,12 +202,30 @@ html {
     .Right {
         font-size: 1.25rem;
     }
+    .atf{
+        margin-top: 85%;
+    }
+.testi{
+    margin-top: 27% ;
 }
+    
+}
+    @media only screen and (max-width: 600px) {
+        .left-section {
+            flex: 1;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            font-size: 18px;
+        }        
+
+    }
 
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2a564;
+   
     color: #333;
     margin: 0;
     padding: 0;
@@ -223,6 +246,7 @@ body {
     flex-direction: column;
     padding: 20px;
     font-size: 18px;
+
 }
 
 .left-section h2 {
@@ -323,6 +347,7 @@ body {
     font-size: 35px;
     cursor: pointer;
     margin: 40px auto;
+    
 }
 
 .donate-button:hover {
@@ -337,6 +362,7 @@ body {
 
     .testimonial {
         width: 30%;
+        
     }
 
     .founder-section {
