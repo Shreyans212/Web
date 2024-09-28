@@ -102,7 +102,7 @@ html {
 }
 .LeftM, .LeftV, .LeftA{
     margin-top: 20%;
-    margin-left: 3000px;
+   
 }
 
 @media (min-width: 1024px) {
@@ -120,7 +120,7 @@ html {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.025em;
-    margin-left: 10%; /* Responsive left margin */
+    /*margin-left: 15%; /* Responsive left margin */
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -154,7 +154,7 @@ html {
     flex-direction: column; /* Stack elements on smaller screens */
     margin-bottom: 20px;
     height: auto; /* Removed fixed height */
-    padding: 20px;
+   /* padding: 20px;*/
 }
 
 /* Right and Left section wrappers */
@@ -167,7 +167,7 @@ html {
 .leftside {
     width: 100%;
     background-color: white;
-    padding: 32px;
+    padding: 10%;
 }
 
 /* Spacing Utility */
@@ -188,11 +188,11 @@ html {
     }
 
     .LeftM, .LeftV, .LeftA {
-        margin-left: 100px; /* Restores the left margin for larger screens */
+        margin-left: 0; /* Restores the left margin for larger screens */
     }
 
     .leftside {
-        width: 33.3333%; /* Sidebar takes up a third of the screen */
+        width: 25%; /* Sidebar takes up a third of the screen */
     }
 }
 
@@ -224,6 +224,9 @@ html {
         } 
         .donate-button{
             margin-left: 300px;
+        }
+        .leftside{
+            text-align: center;
         }
       
 
